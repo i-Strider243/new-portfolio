@@ -90,3 +90,4 @@ const proudOfThisFunc = () => {
 ## Acknowledgements
 
 This project would not have been possible without the motivation and the direction i got from the SideHustle Internship I had the privilege of participating in.
+# portfolio
