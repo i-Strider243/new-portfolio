@@ -7,15 +7,15 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="css/all.min.css">
   <link rel="stylesheet" href="css/fontawesome.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="style.css">
   
   <title>Frontend Mentor | Fylo landing page with dark theme and features grid</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <!-- 👍 -->
   
   <style>
     .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution a { color: salmon; }
   </style>
 </head>
 
@@ -156,15 +156,15 @@
 			<p>It only takes a minute to sign up and our free starter tier is extremely generous. If you have any questions, our support team would be happy to help you.</p>
 		</div>
 		<div class="form-sign">	
-			<form>
+			<form name="form1" action="#" autocomplete="off">
 				<div class="form-container form-container-1">
-					<input type="email" name="email" placeholder="email@example.com" id="">
+					<input type="text" name="email" placeholder="email@example.com" id="email" />
 					<div class="error-box">
 						<p id="error-msg"></p>
 					</div>
 				</div>
 				<div class="form-container">
-					<button>Get Started For Free</button>
+					<input id="submit-btn" name="register-submition" type="submit" onclick="ValidateEmail(document.form1.email)" value="Get Started For Free" />
 				</div>
 			</form>
 		</div>
@@ -209,9 +209,9 @@
 		</div>
 		
 		<div class="outro icons">
-				<a><i class="fab fa-facebook-f"></i></a>
-				<a><i class="fab fa-twitter"></i></a>
-				<a><i class="fab fa-instagram"></i></a>
+				<a href="https://www.facebook.com/profile.php?id=100010608033091" target="_blank"><i class="fa-solid fab fa-facebook-f circle"></i></a>
+				<a href="https://www.twitter.com/strider18" target="_blank"><i class="fab fa-twitter circle"></i></a>
+				<a href="https://www.instagram.com/i_strider" target="_blank"><i class="fab fa-instagram circle"></i></a>
 		</div>
 	</div>
 
@@ -222,5 +222,25 @@
     	</p>
     </div>
 </footer>
+<script>
+
+	function ValidateEmail(input) {
+
+		var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+		
+		if (input.value.match(validRegex)) {
+			alert("Valid email address!");
+			document.form1.email.focus();
+			
+			return true;
+
+		} else {
+			document.getElementById("error-msg").innerHTML = "Please enter a valid email";
+			document.form1.email.focus();
+
+			return false;
+		}
+	}
+</script>
 </body>
 </html>

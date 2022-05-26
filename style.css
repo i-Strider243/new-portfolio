@@ -9,7 +9,7 @@
 /*main CSS*/
 
 body{
-	background: hsl(216, 33%, 97%);
+	background: hsl(218, 28%, 13%);
 	font-family: 'Open Sans', sans-serif;
 	color: white;
 	display: flex;
@@ -34,6 +34,12 @@ a{
 	cursor: pointer;
 	font-family: 'Raleway', sans-serif;
 }
+i {
+	border-radius: 100%;
+	border: 1px solid #fff;
+	width: 15px;
+	height: 15px;
+}
 button{
 	color: white;
 	font-family: 'Raleway', sans-serif;
@@ -53,7 +59,7 @@ button:hover{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 20px;
+	padding: 40px 20px;
 	position: sticky;
 	top: 0px;
 	left: 0px;
@@ -146,16 +152,12 @@ button:hover{
 	text-align: left;
 }
 .stay-productive a{
-	background-image: url("images/icon-arrow.svg");
-	background-repeat: no-repeat;
-	background-position-x: right;
+	background: url("images/icon-arrow.svg") no-repeat bottom right;
 	padding-right: 20px;
-	width: fit-content;
 	color:  hsl(176, 68%, 64%);
 }
 .stay-productive a:hover{
-	color: white;
-	background-image: url("images/icon-arrow.svg");
+	color: #fff;
 }
 .testimonials{
 	padding: 20px;
@@ -192,7 +194,6 @@ button:hover{
 	left: -10px;
 	top: -35px;
 	z-index: -1;
-	height: fit-content;
 }
 .sub{
 	position: relative;
@@ -280,7 +281,9 @@ button:hover{
 	bottom: -15px;
 	left: 20px;
 	color: hsl(0, 100%, 63%);
-	font-size: 10px;}
+	font-size: 10px;
+	padding: 5px;
+}
 footer{
 	background: hsl(216, 53%, 9%);
 	padding: 20px;
@@ -299,6 +302,28 @@ footer img{
 	z-index: -1;
 	background: hsl(216, 53%, 9%);
 }
+.outro{
+	display: flex;
+	align-items: center;
+	padding: 0px;
+	width: 190px;
+	min-width: 160px;
+	margin-bottom: 10px;
+}
+.location, .outro li {
+	list-style-type: none;
+	padding-bottom: 5px;
+	position: relative;
+	line-height: 30px;
+}
+.outro i{
+	display: flex;
+	padding: 5px;
+}
+.outro i:hover{
+	color: hsl(176, 68%, 64%);
+	border-color: hsl(176, 68%, 64%);
+}
 .outro-items{
 	display: flex;
 	flex-wrap: wrap;
@@ -312,43 +337,41 @@ footer img{
 .outro-items a:hover{
 	font-weight: 700;
 }
+.location{
+	margin-left: 20px;
+}
 .location-li{
-	padding: 0px;
 	width: 340px;
 	margin-bottom: 10px;
 }
-.location{
-	list-style-image: url("images/icon-location.svg");
+.location:before{
+	content: url(images/icon-location.svg);
+    position: absolute;
+    top: 5px;
+	left: -25px;
 }
 .phone{
-	list-style-image: url("images/icon-phone.svg");
+	margin-left: 20px;
+}
+.phone:before{
+	content: url(images/icon-phone.svg);
+    position: absolute;
+    top: 5px;
+	left: -25px;
 }
 .email{
-	list-style-image: url("images/icon-email.svg");
+	margin-left: 20px;
 }
-.outro{
-	display: flex;
-	align-items: center;
-	padding: 0px;
-	width: 190px;
-	min-width: 160px;
-	margin-bottom: 10px;
-}
-.outro li {
-	list-style-type: none;
-	padding-bottom: 5px;
-}
-.outro i{
-	display: flex;
-	padding: 5px;
-}
-.outro i:hover{
-	color: hsl(176, 68%, 64%);
+.email:before{
+	content: url(images/icon-email.svg);
+    position: absolute;
+    top: 5px;
+	left: -25px;
 }
 .icons{
 	display: flex;
 	justify-content: space-evenly;
-	padding-top: 10px; 
+	padding: 10px; 
 }
 
 /*MEDIA QUERIES*/
@@ -383,7 +406,8 @@ footer img{
 	}
 	.sub-nav a{
 		font-size: 11px;
-	}.intro{
+	}
+	.intro{
 		width: 100%;
 		padding-bottom: 60px;
 	}
@@ -453,14 +477,15 @@ footer img{
 	.form-container{
 		min-width: 180px;
 		width: 100%;
-		margin: 0 10px;
+		margin: 10px;
 	}
 	.form-container-1{
 		min-width: 260px;
 		width: 400px;
+		margin: 10px;
 	}
 	.form-container input{
-		margin-bottom: 15px;
+		margin-bottom: 10px;
 		padding: 12px 12px;
 		min-width: 200px;
 		width: 100%;
@@ -469,11 +494,8 @@ footer img{
 	.form-container button{
 		padding: 12px 40px;
 		margin: 0px;
-		min-width: 200px;
-		width: 100%;
-		box-sizing: border-box;
 	}
-	#error-msg{
+	.error-msg{
 		bottom: 0px;
 		left: 20px;
 	}
