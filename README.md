@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![Screenshot](solutions/desktop_fylo_dark-theme_17-3-2022_.jpeg)
 
 ### Links
 
