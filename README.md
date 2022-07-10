@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Solution URL here](https://www.frontendmentor.io/solutions/responsive-fylo-dark-theme-landing-page-using-flexbox-HTiZ6ximGG)
 - Live Site URL: [Live site URL here](https://i-strider243.github.io/new-portfolio/?email=g&register-submition=Get+Started+For+Free#)
 
 ## My process
